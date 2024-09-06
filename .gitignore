@@ -1,0 +1,8 @@
+__pycache__/
+项目问题与改进方案.ods
+dist/
+build/
+*.spec
+Pipfile
+Pipfile.lock
+version.txt
