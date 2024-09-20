@@ -2,7 +2,7 @@ import time
 import music_rc
 
 from playerui import Ui_Form
-from PyQt5.QtWidgets import QDialog,QLCDNumber
+from PyQt5.QtWidgets import QWidget,QLCDNumber
 from PyQt5.QtCore import Qt,QUrl,QTimer
 from PyQt5.QtMultimedia import QMediaContent,QMediaPlayer,QMediaResource
 import sys
@@ -10,7 +10,7 @@ mixer = QMediaPlayer()
 # mixer.setMedia(QMediaContent(QUrl.fromLocalFile(os.path.join(os.path.dirname(__file__),"ding.mp3"))))
 mixer.setMedia(QMediaContent([QMediaResource(QUrl("qrc:/resources/ding.mp3"))]))
 mixer.setVolume(50)
-class PlayerWidget(QDialog):
+class PlayerWidget(QWidget):
     def __init__(self,acolor=[0,128,255],bcolor=[255,128,0],dtime=180.0,tbuf=0.5,discolor=[80,80,80],parent=None):
         super().__init__(parent)
         self.ui = Ui_Form()

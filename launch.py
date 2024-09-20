@@ -34,7 +34,7 @@ class Window(QWidget):
             dtime = eval(self.ui.time4.text())
             self.status = -1
         # PlayerWidget(dtime=dtime).exec()
-        popen("player.exe dtime=%d"%dtime).read()
+        popen("./player dtime=%d"%dtime).read()
         if self.status == -1:
             self.close()
         self.repaint()
